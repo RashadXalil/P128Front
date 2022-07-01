@@ -1,0 +1,86 @@
+@import "../utils/variables";
+@import "../utils/mixin";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+.custom__header {
+  @include center(flex, center, center);
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+  height: 80px;
+  &__left {
+    &__item {
+    }
+  }
+  &__right {
+    float: right;
+    &__item {
+      cursor: pointer;
+      transition: 0.3s linear;
+
+      &:hover {
+        color: lightgrey;
+      }
+    }
+  }
+}
+
+.hero-section {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  &__left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #e3e3e3;
+
+    &--input {
+      width: 480px;
+      height: 56px;
+      background: #ffffff;
+      box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      padding-left: 60px;
+    }
+    i {
+      position: absolute;
+      left: 0;
+      left: 30px;
+    }
+  }
+  &__right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    #filter {
+      width: 200px;
+    }
+  }
+}
+.countries__section {
+  .single__country {
+    width: 264px;
+    height: 336px;
+    border-radius: 10px;
+    box-shadow: $app-box-shadow;
+    &__image {
+      &__item {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+      }
+    }
+    &__about {
+      padding: 10px;
+      &__title {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
